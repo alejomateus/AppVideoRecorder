@@ -1,0 +1,86 @@
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <form [formGroup]="form_login" (ngSubmit)="login()">
+          <div class="modal-header">
+            <h5 class="modal-title">Inicia sesión</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <label
+              ><b>Escribe tu correo electronico para poder ingresar</b></label
+            >
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Correo</label>
+              <div class="col-md-8">
+                <input
+                  class="form-control"
+                  type="email"
+                  placeholder="Correo electrónico"
+                  formControlName="email"
+                />
+                <div
+                  *ngIf="
+                    form_login.get('email').errors?.required &&
+                    form_login.get('email').dirty
+                  "
+                  class="form-control-feedback"
+                >
+                  El Correo es necesario.
+                </div>
+                <div
+                  *ngIf="
+                    form_login.get('email').errors?.pattern &&
+                    form_login.get('email').dirty
+                  "
+                  class="form-control-feedback"
+                >
+                  Correo invalido
+                </div>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-2 col-form-label">Password</label>
+              <div class="col-md-8">
+                <input
+                  class="form-control"
+                  type="password"
+                  placeholder="Password"
+                  formControlName="password"
+                />
+                <div
+                  *ngIf="
+                    form_login.get('password').errors?.required &&
+                    form_login.get('password').dirty
+                  "
+                  class="form-control-feedback"
+                >
+                  La contraseña es un campo necesario.
+                </div>
+              </div>
+            </div>
+            <div class="form-control-feedback" *ngIf="incorrect_login">
+              Usuario y/o Contraseña Incorrectos
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="submit"
+              class="btn btn-danger btn-large w-50"
+              
+            >
+              INGRESA
+            </button> 
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  

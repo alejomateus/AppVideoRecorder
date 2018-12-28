@@ -1,0 +1,20 @@
+<nav>
+  <div class="row">
+    <div class="col-6">
+      <span class="oracle">Oracle</span> <br />
+      <span>Digital <b>Transformation</b> Day</span>
+    </div>
+    <div class="col-6 text-right">
+      <button
+        type="button"
+        class="btn  btn-danger"
+        (click)="logout()"
+        *ngIf="this.auth.isAuthenticated()"
+      >
+        Cerrar sesión
+      </button>
+      <br>
+      <span class="module"> {{ title }} </span>
+    </div>
+  </div>
+</nav>

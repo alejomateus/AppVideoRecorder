@@ -1,0 +1,46 @@
+<div class="row m-5 text-center" *ngIf="videos.length <= 0">
+    <div class="col-12 text-center">
+        <div class="loader text-center"></div>
+      </div>
+  </div>
+<div class="boxvideo " *ngIf="videos.length > 0">
+    <span>Haz clic para entrar a cualquiera de nuestras conferencias en directo</span>
+    <div class="pb-4"></div>
+  <div class="row">
+    <div class="col-lg-4 col-sm-12 text-center">
+        <label class="name_video">{{videos[0].name}}</label>
+      <video disabled="true" controls id="video{{videos[0].id}}" (click)="clickvideo(videos[0].id)">
+        <source src="{{videos[0].url}}" type="video/mp4"  />
+      </video>
+    </div>
+    <div class="col-lg-4 col-sm-12 text-center">
+        <label class="name_video">{{videos[1].name}}</label>
+      <video disabled="true" controls id="video{{videos[1].id}}" (click)="clickvideo(videos[1].id)">
+        <source src="{{videos[1].url}}" type="video/mp4"  />
+      </video>
+    </div>
+    <div class="col-lg-4 col-sm-12 text-center">
+        <label class="name_video">{{videos[2].name}}</label>
+      <video disabled="true" controls id="video{{videos[2].id}}" (click)="clickvideo(videos[2].id)">
+        <source src="{{videos[2].url}}" type="video/mp4"  />
+      </video>
+    </div>
+  </div>
+  <div class="row mt-1">
+    <div class="col-lg-2 col-sm-12 "></div>
+    <div class="col-lg-4 col-sm-12 text-center">
+        <label class="name_video">{{videos[3].name}}</label>
+      <video disabled="true" controls id="video{{videos[3].id}}" (click)="clickvideo(videos[3].id)">
+        <source src="{{videos[3].url}}" type="video/mp4"  />
+      </video>
+    </div>
+    <div class="col-lg-4 col-sm-12 text-center">
+        <label class="name_video">{{videos[4].name}}</label>
+      <video disabled="true" controls id="video{{videos[4].id}}" (click)="clickvideo(videos[4].id)"   >
+        <source src="{{videos[4].url}}" type="video/mp4"  />
+      </video>
+    </div>
+    <div class="col-lg-2 col-sm-12 "></div>
+  </div>
+</div>
+<div class="pb-4"></div>

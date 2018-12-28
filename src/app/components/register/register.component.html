@@ -1,0 +1,322 @@
+<form [formGroup]="forma" (ngSubmit)="register()">
+  <div class="row mt-5 mr-2 ml-2 mb-2">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-md-lg-4"></div>
+    <div class="col-xs-12 col-sm-12 col-md-8 col-md-lg-8">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Nombre"
+                formControlName="name"
+              />
+              <div
+                *ngIf="
+                  forma.get('name').errors?.required && forma.get('name').dirty
+                "
+                class="form-control-feedback"
+              >
+                El nombre es necesario.
+              </div>
+              <div
+                *ngIf="
+                  forma.get('name').errors?.minlength && forma.get('name').dirty
+                "
+                class="form-control-feedback"
+              >
+                Por lo menos 3 caracteres.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Apellido"
+                formControlName="last_name"
+              />
+              <div
+                *ngIf="
+                  forma.get('last_name').errors?.required &&
+                  forma.get('last_name').dirty
+                "
+                class="form-control-feedback"
+              >
+                El Apellido es necesario.
+              </div>
+              <div
+                *ngIf="
+                  forma.get('last_name').errors?.minlength &&
+                  forma.get('last_name').dirty
+                "
+                class="form-control-feedback"
+              >
+                El Apellido debe tener mas de 3 caracteres.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Empresa"
+                formControlName="company"
+              />
+              <div
+                *ngIf="
+                  forma.get('company').errors?.required &&
+                  forma.get('company').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Empresa es necesario.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="email"
+                placeholder="Correo electrónico"
+                formControlName="email"
+              />
+              <div
+                *ngIf="
+                  forma.get('email').errors?.required &&
+                  forma.get('email').dirty
+                "
+                class="form-control-feedback"
+              >
+                El correo es necesario.
+              </div>
+              <div
+                *ngIf="
+                  forma.get('email').errors?.pattern && forma.get('email').dirty
+                "
+                class="form-control-feedback"
+              >
+                Correo invalido
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Cargo"
+                formControlName="position"
+              />
+              <div
+                *ngIf="
+                  forma.get('position').errors?.required &&
+                  forma.get('position').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Cargo es necesario.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Direccion"
+                formControlName="address"
+              />
+              <div
+                *ngIf="
+                  forma.get('address').errors?.required &&
+                  forma.get('address').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Direccion es necesario.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Ciudad"
+                formControlName="city"
+              />
+              <div
+                *ngIf="
+                  forma.get('city').errors?.required && forma.get('city').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Ciudad es necesario.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Telefono"
+                formControlName="phone"
+              />
+              <div
+                *ngIf="
+                  forma.get('phone').errors?.required &&
+                  forma.get('phone').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Telefono es necesario.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="password"
+                placeholder="Contraseña"
+                formControlName="password1"
+              />
+              <div
+                *ngIf="
+                  forma.get('password1').errors?.required &&
+                  forma.get('password1').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Contraseña es necesario.
+              </div>
+              <div
+                *ngIf="
+                  forma.get('password1').errors?.minlength &&
+                  forma.get('password1').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Contraseña debe tener minimo 8 caracteres
+              </div>
+              <div
+                *ngIf="
+                  forma.get('password1').errors?.maxlength &&
+                  forma.get('password1').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Contraseña debe tener maximo 20 caracteres
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="form-group row">
+            <label class=" col-form-label"></label>
+            <div class="col-md-12">
+              <input
+                class="form-control"
+                type="password"
+                placeholder="Confirmar Contraseña"
+                formControlName="password2"
+              />
+              <div
+                *ngIf="
+                  forma.get('password2').errors?.required &&
+                  forma.get('password2').dirty
+                "
+                class="form-control-feedback"
+              >
+                El campo Confirmar Contraseña es necesario.
+              </div>
+              <div
+                *ngIf="
+                  forma.get('password2').errors?.noiguales &&
+                  forma.get('password2').dirty
+                "
+                class="form-control-feedback"
+              >
+                Las contraseñas no son iguales
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row mt-0 mr-2 ml-2 pb-5">
+    <div class="col-xs-12 col-sm-12 col-md-4 col-md-lg-4"></div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-md-lg-4">
+      <div class="form-group ">
+        <button
+          type="button"
+          class="btn btn-danger w-100"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          INGRESA
+        </button>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-md-lg-4">
+      <div class="form-group ">
+        <button
+          type="submit"
+          class="btn btn-danger w-100"
+          [disabled]="!forma.valid"
+        >
+          REGISTRATE
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-primary" role="alert" *ngIf="complete">
+    Te has registrado correctamente ahora por favor ve a Login para realizar tus
+    asignaciones
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="errors_register">
+    Error al registrarse, por favor revisa los datos e intentalo nuevamente
+  </div>
+  <div class="p-4"></div>
+</form>
+<app-login></app-login>

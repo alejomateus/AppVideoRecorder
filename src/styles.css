@@ -1,0 +1,64 @@
+body{
+    background-color: #C7E0F4 !important;
+}
+nav{
+    padding: 10px;
+    background: #dde7e8;
+}
+.oracle{
+    color: red !important;
+}
+.module{
+    color:#fff;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+footer{
+    background-color: red;
+    color:#fff;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 20px;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: right;
+}
+.form-control-feedback{
+    color:red;
+}
+video{
+    width: 100%;
+    max-height: 400px;
+}
+.boxvideo{
+    margin:50px;
+}
+.name_video{
+    color:red;
+    font-weight: bold;
+}
+.loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid red;
+    border-bottom: 16px solid red;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    left: 50%;
+    position: absolute;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: red !important;
+    border-color: red !important;
+}
